@@ -1,0 +1,26 @@
+insert into CUSTOMER_MASTER values ('C0001', 'Rahul Joshi', 'Surat', 'Male');
+insert into CUSTOMER_MASTER values ('C0002', 'Rahul Joshi', 'Ahmedabad', 'Male');
+insert into CUSTOMER_MASTER values ('C0003', 'Rahul Joshi', 'Surat', 'Female');
+insert into CUSTOMER_MASTER values ('C0004', 'Rahul Joshi', 'Bharuch', 'Female');
+insert into CUSTOMER_MASTER values ('C0005', 'Rahul Joshi', 'Surat', 'Female');
+insert into CUSTOMER_MASTER values ('C0006', 'Rahul Joshi', 'Surat', 'Male');
+
+insert into BRANCH_MASTER values ('B1', 'Katargam, Surat');
+insert into BRANCH_MASTER values ('B2', 'Ghod road, Surat');
+insert into BRANCH_MASTER values ('B3', 'City Light, Surat');
+insert into BRANCH_MASTER values ('B4', 'Kapodra, Surat');
+insert into BRANCH_MASTER values ('B5', 'Ring Road, Surat');
+
+insert into ACCOUNT_MASTER values ('A0001', 'Savings', 10000, 'C0002', 'B3');
+insert into ACCOUNT_MASTER values ('A0002', 'Current', 20000, 'C0001', 'B1');
+insert into ACCOUNT_MASTER values ('A0003', 'Savings', 13000, 'C0003', 'B1');
+insert into ACCOUNT_MASTER values ('A0004', 'Savings', 100000, 'C0004', 'B1');
+insert into ACCOUNT_MASTER values ('A0005', 'Savings', 1200, 'C0006', 'B2');
+insert into ACCOUNT_MASTER values ('A0006', 'Savings', 50000, 'C0001', 'B1');
+
+insert into EMPLOYEE_MASTER values ('E0001', 'Aman Joshi', 'Clerk', 9876543210, 15000, 'B1');
+insert into EMPLOYEE_MASTER values ('E0002', 'Raj Patel', 'Manager', 8723412345, 20000, 'B3');
+insert into EMPLOYEE_MASTER values ('E0003', 'Ashish Desai', 'Financial Manager', 9812356012, 25000, 'B2');
+insert into EMPLOYEE_MASTER values ('E0004', 'Diya Patel', 'Manager', 8712356012, 20000, 'B1');
+insert into EMPLOYEE_MASTER values ('E0005', 'Kushi Desai', 'Manager', 8692398123, 20000, 'B1');
+insert into EMPLOYEE_MASTER values ('E0006', 'Meet Patel', 'Manager', 9912389654, 20000, 'B2');
