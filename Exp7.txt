@@ -1,31 +1,28 @@
-create table COUSTOMER_MASTER(CustID varchar(5) primary key check(CustID like 'C%'),Name varchar(30) not null,Address varchar(100) not null,Gender varchar(10) not null check(Gender in ('Male', 'Female')));
-insert into COUSTOMER_MASTER values('C0001', 'rahul joshi', 'Surat', 'Male');
-insert into COUSTOMER_MASTER values('C0002', 'jigar paramar', 'ahemadabad', 'Male');
-insert into COUSTOMER_MASTER values('C0003', 'tina shah', 'Surat', 'Female');
-insert into COUSTOMER_MASTER values('C0004', 'diya patel', 'Bharuch', 'Female');
-insert into COUSTOMER_MASTER values('C0005', 'ruchi shah', 'Surat', 'Female');
-insert into COUSTOMER_MASTER values('C0006', 'meet patel', 'Surat', 'Female');
-
-create table BRANCH_MASTER(
-BranchID varchar(6) primary key check(BranchID like 'B%'),
-Name varchar(60) not null
+create table CUSTOMER_MASTER (
+	CustID varchar(6) primary key check(CustID like 'C%'),
+	Name varchar(20) not null,
+	Address varchar(100),
+	Gender varchar(10)
 );
 
-create table ACCOUNT_MASTER(
-Accno varchar(6) primary key check(Accno like 'A%'),
-Type varchar(15) check(Type in ('Saving', 'Current')),
-Balance number(10) check(Balance >= 0),
-CustID varchar(6) references COUSTOMER_MASTER(CustID),
-BranchID varchar(6) references BRANCH_MASTER(BranchID)
-)
-;
+create table BRANCH_MASTER (
+	BranchID varchar(6) primary key check(BranchID like 'B%'),
+	Name varchar(50) not null
+);
 
-create table EMPLOYEE_MASTER(
-EmpID varchar(6) primary key check(EmpID like 'E%'),
-EmpName varchar(20) not null,
-Desg varchar(20),
-MoNo number(10),
-Salary number(8) check(Salary >= 0),
-BranchID varchar(6) references BRANCH_MASTER(BranchID)
-)
-;
+create table ACCOUNT_MASTER (
+	AccNo varchar(6) primary key check(AccNo like 'A%'),
+	Type varchar(15) check(Type in ('Current', 'Savings')),
+	Balance number(10) check(Balance >= 0),
+	CustID varchar(6) references CUSTOMER_MASTER(CustID),
+	BranchID varchar(6) references BRANCH_MASTER(BranchID)
+);
+
+create table EMPLOYEE_MASTER (
+	EmpID varchar(6) primary key check(EmpID like('E%')),
+	EmpName varchar(20) not null,
+	Desg varchar(20),
+	MoNo number(10),
+	Salary number(8) check(Salary >= 0),
+	BranchID varchar(6) references BRANCH_MASTER(BranchID)
+);
