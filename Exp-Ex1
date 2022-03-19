@@ -1,0 +1,31 @@
+create table DEPARTMENT (
+	DeptID varchar(6) primary key,
+	DeptName varchar(20) not null,
+	Description varchar(100)
+);
+
+create table EMPLOYEE (
+	EmpID varchar(6) primary key check(EmpID like 'E%'),
+	EmpName varchar(50) not null,
+	Salary number(10) check(Salary >= 0),
+	Post varchar(20) check(Post in ('Lab Assistant', 'Lecturer', 'HOD')),
+	City varchar(20) check(UPPER(City) = City),
+	DeptID varchar(6) references DEPARTMENT(DeptID)
+);
+
+insert into DEPARTMENT values (6, 'Civil', 'Basic of Construction and Planning');
+insert into DEPARTMENT values (7, 'Computer', 'Basic of Computer Knowledge and Languages');
+insert into DEPARTMENT values (9, 'Electrical', 'Basic of Electrical components');
+insert into DEPARTMENT values (16, 'Info Tech', 'Basic of Software programming');
+insert into DEPARTMENT values (19, 'Mechanical', 'Basic of Machining');
+
+insert into EMPLOYEE values ('E001', 'Nidhi Desai', 25000, 'HOD', 'SURAT', 16);
+insert into EMPLOYEE values ('E002', 'Rahul Patel', 20000, 'Lecturer', 'BHARUCH', 16);
+insert into EMPLOYEE values ('E003', 'Ajay Patel', 35000, 'HOD', 'SURAT', 9);
+insert into EMPLOYEE values ('E004', 'Rakesh Patel', 30000, 'Lecturer', 'NAVSARI', 9);
+insert into EMPLOYEE values ('E005', 'Pratik Shah', 30000, 'Lecturer', 'SURAT', 7);
+insert into EMPLOYEE values ('E006', 'Swati Jadav', 25000, 'Lecturer', 'SURAT', 7);
+insert into EMPLOYEE values ('E007', 'Vivek Gohil', 10000, 'Lab Assistant', 'SURAT', 16);
+insert into EMPLOYEE values ('E008', 'Drashit Patel', 10000, 'Lab Assistant', 'SURAT', 7);
+insert into EMPLOYEE values ('E009', 'Vipul Desai', 20000, 'Lecturer', 'VADODRA', null);
+insert into EMPLOYEE values ('E010', 'Dhruv Mehta', 20000, 'Lecturer', 'NAVSARI', null);
