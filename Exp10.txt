@@ -1,0 +1,6 @@
+delete from ACCOUNT_MASTER where Balance < 5000;
+truncate table ACCOUNT_MASTER;
+delete from EMPLOYEE_MASTER where Desg = 'Financial Manager';
+delete from ACCOUNT_MASTER where Type = 'Savings';
+delete from BRANCH_MASTER where Name ='Ring Road, Surat';
+drop table CUSTOMER_MASTER; --Gives error since refered in child table
