@@ -1,0 +1,8 @@
+select * from EMPLOYEE_MASTER;
+select EmpID, Salary from EMPLOYEE_MASTER;
+select EmpName from EMPLOYEE_MASTER where Desg = 'Manager';
+select Name from CUSTOMER_MASTER;
+select * from CUSTOMER_MASTER where Address = 'Surat';
+select * from ACCOUNT_MASTER where AccNo = 'A0005';
+select AccNo, Balance from ACCOUNT_MASTER;
+-- IDK this one
