@@ -1,0 +1,6 @@
+select EmpID, Salary from EMPLOYEE_MASTER;
+select EmpName from EMPLOYEE_MASTER where Desg = 'Manager';
+select EmpID from EMPLOYEE_MASTER where Salary > 20000;
+select AccNo, Balance from ACCOUNT_MASTER;
+select * from ACCOUNT_MASTER where AccNo = 'A0005';
+select AccNo, Balance from ACCOUNT_MASTER where Type = 'Savings';
