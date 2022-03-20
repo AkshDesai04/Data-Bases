@@ -1,0 +1,6 @@
+update CUSTOMER_MASTER set Address = 'Bharuch' where CustID = 'C0002';
+update ACCOUNT_MASTER set Balance = 15000 where AccNo = 'A0001';
+update ACCOUNT_MASTER set BranchID = 'B4' where AccNo = 'A0005';
+update EMPLOYEE_MASTER set desg = 'Senior Manager' where EmpID = 'E0003';
+update EMPLOYEE_MASTER set MoNo = 9812763450 where EmpID = 'E0003';
+update EMPLOYEE_MASTER set Salary = Salary * 1.1;
